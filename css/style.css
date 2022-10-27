@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+:root {
+    --black: #111;
+    --text-c: #555c66;
+    --bg-footer: #333;
+    --light-text: #b3b3b3;
+    --main-bg: #f2f2f2;/* icon bg */
+    --blue: #2162e3;
+    --shadow: rgb(0 0 0 / 20%);
+    --input-border: #d9d9d9;
+}
+/* global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-bg);
+}
+@media (min-width: 922px) {
+    .container {
+        margin-left: 100px !important;
+        margin-right: 100px !important;
+    }
+}
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* start header */
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    height: 74px;
+}
+header form input {
+    border: 1px solid var(--input-border);
+}
+header form input::placeholder {
+    color: var(--input-border);
+}
+header form i {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+@media (max-width: 767px) {
+    header nav {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-footer);
+        padding: 30px;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        flex-basis: 100%;
+    }
+    header nav ul li a {
+        color: white !important;
+    }
+    header nav .close {
+        display: block !important;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+header nav ul li a {
+    color: var(--footer-bg);
+}
+header nav ul li a:hover {
+    opacity: .75;
+}
+header nav .close {
+    color: white;
+    display: none;
+}
+@media (max-width: 767px) {
+    header .open {
+        display: block !important;
+    }
+}
+header .open {
+    display: none;
+}
+/* end header */
+/* start landing */
+@media (max-width: 921px) {
+    .landing .container {
+        flex-wrap: wrap;
+    }
+    .landing .container .image {
+        width: 100% !important;
+    }
+    .landing .container .info {
+        width: 100% !important;
+    }
+}
+.landing .container .image {
+    width: 40%;
+}
+.landing .container .info {
+    width: calc(60% - 30px);
+}
+@media (max-width: 921px) {
+    .landing .more-info {
+        flex-wrap: wrap;
+    }
+    .landing .more-info > div {
+        width: 100% !important;
+    }
+}
+.landing .more-info > div {
+    width: calc(50% - 5px);
+}
+.landing .more-info a:hover {
+    color: var(--blue);
+}
+/* end landing */
+
+/* start hosting*/
+.hosting .container h2 {
+    max-width: 600px;
+}
+.hosting .container > p {
+    max-width: 400px;
+}
+/* end hosting */
+
+/* start about*/
+@media (max-width: 767px) {
+    .about .container .info > div  {
+        width: 100%;
+    }
+    .about .container .info .left-sec {
+        order: 2;
+    }
+    .about .container .info .right-sec {
+        order: 1;
+    }
+}
+.about .container .info .left-sec a:hover {
+    background-color: white;
+    color: var(--blue);
+}
+/* end about */
+
+/* start team  */
+@media (max-width: 767px) {
+    .team .members {
+        flex-wrap: wrap;
+
+    }
+    .team .members .member {
+        width: 100% !important;
+        flex-direction: column;
+    }
+    .team .members .member .social-media {
+        justify-content: center;
+    }
+}
+.team .members .member a:hover {
+    background-color: white;
+}
+.team .members .member a:hover i {
+    color: var(--blue);
+}
+/* end team  */
+
+/* start contact*/
+/* end contact */
+
+/* start pricing */
+.pricing .container > p {
+    max-width: 600px;
+}
+.pricing .container .member li {
+    word-break: none;
+    white-space: nowrap;
+}
+.pricing .container .white a:hover {
+    background-color: var(--blue);
+}
+.pricing .container .white a:hover i {
+    color:white;
+}
+.pricing .container .blue a:hover {
+    background-color: var(--blue);
+    border-color: white;
+}
+.pricing .container .blue a:hover i {
+    color:white;
+}
+/* end pricing */
+/* preview */
+.reviews .review h3 {
+    white-space: nowrap;
+}
+/* preview */
+/* brands */
+.brands .container h2,
+.brands .container > p,
+.brands .container .brands-container {
+    max-width: 700px;
+}
+.brands .container .brands-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.brands .container .brands-container img {
+    height: 60px;
+}
+/* brands */
+
+/* start download */
+.download {
+    background-image: url("../images/sec-bg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.download .container p {
+    max-width: 600px;
+}
+.download .container a:hover {
+    background-color: var(--blue);
+    color: white;
+}
+/* end download */
+
+/* contact */
+@media (max-width: 767px) {
+    .contact .container {
+        flex-direction: column;
+    }
+}
+.contact form textarea {
+    resize: none;
+    height: 150px;
+}
+.contact p .checkbox {
+    appearance: none;
+}
+.contact .squar::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border: 2px solid var(--blue);
+    transition: .3s;
+    background-color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+}
+.contact .squar::after {
+    content: "\f00c";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -15px;
+    color: white;
+}
+.contact p .checkbox:checked + label::before {
+    background-color: var(--blue);
+}
+.contact form .submit:hover {
+    background-color: white;
+    color: var(--blue);
+}
+/* contact */
+
+/* start footer */
+footer .text {
+    max-width: 500px;
+}
+footer a:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
+/* end footer */
